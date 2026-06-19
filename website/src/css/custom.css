@@ -1,0 +1,50 @@
+/**
+ * Sinux theme — cyan + violet on deep space background.
+ */
+
+:root {
+  --ifm-color-primary: #0e9fb8;
+  --ifm-color-primary-dark: #0d8fa6;
+  --ifm-color-primary-darker: #0c879d;
+  --ifm-color-primary-darkest: #0a6f81;
+  --ifm-color-primary-light: #10afca;
+  --ifm-color-primary-lighter: #11b7d3;
+  --ifm-color-primary-lightest: #2bc8e2;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Dark mode — the primary experience */
+[data-theme='dark'] {
+  --ifm-color-primary: #22d3ee;
+  --ifm-color-primary-dark: #14c4df;
+  --ifm-color-primary-darker: #12b9d3;
+  --ifm-color-primary-darkest: #0f99ae;
+  --ifm-color-primary-light: #3fdaf0;
+  --ifm-color-primary-lighter: #4cddf2;
+  --ifm-color-primary-lightest: #74e6f5;
+  --ifm-background-color: #05060a;
+  --ifm-background-surface-color: #0b0e16;
+  --ifm-card-background-color: rgba(255, 255, 255, 0.02);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(11, 14, 22, 0.7);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+[data-theme='light'] .navbar {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* GitHub navbar icon */
+.navbar__item .navbar__link[href*='github.com']:hover {
+  color: var(--ifm-color-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+}
