@@ -16,9 +16,9 @@ const config: Config = {
   },
 
   // Production URL of your site.
-  url: 'https://amdevelopercp-dotcom.github.io',
+  url: 'https://sinuxproject.github.io',
   // For GitHub Pages deployment, this is the "/<projectName>/" path.
-  baseUrl: '/Sinux/',
+  baseUrl: '/Website-Sinux/',
 
   // GitHub Pages deployment config.
   organizationName: 'amdevelopercp-dotcom', // GitHub account hosting the site.
@@ -47,7 +47,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/amdevelopercp-dotcom/Sinux/tree/main/website/',
+          editUrl: 'https://sinuxproject.github.io/Website-Sinux/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +57,7 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          editUrl: 'https://github.com/amdevelopercp-dotcom/Sinux/tree/main/website/',
+          editUrl: 'https://sinuxproject.github.io/Website-Sinux/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
