@@ -1,36 +1,36 @@
 /* Futuristic display font for the Sinux wordmark */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Vazirmatn:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Vazirmatn:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /**
- * Sinux theme — cyan + violet on deep space background.
+ * Sinux theme — blood red on near-black, DOS-terminal feel.
  */
 
 :root {
-  --ifm-color-primary: #0e9fb8;
-  --ifm-color-primary-dark: #0d8fa6;
-  --ifm-color-primary-darker: #0c879d;
-  --ifm-color-primary-darkest: #0a6f81;
-  --ifm-color-primary-light: #10afca;
-  --ifm-color-primary-lighter: #11b7d3;
-  --ifm-color-primary-lightest: #2bc8e2;
+  --ifm-color-primary: #c41f24;
+  --ifm-color-primary-dark: #a91a1e;
+  --ifm-color-primary-darker: #9c181c;
+  --ifm-color-primary-darkest: #801417;
+  --ifm-color-primary-light: #d9282d;
+  --ifm-color-primary-lighter: #e0343a;
+  --ifm-color-primary-lightest: #e85a5e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-base: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 /* Dark mode — the primary experience */
 [data-theme='dark'] {
-  --ifm-color-primary: #22d3ee;
-  --ifm-color-primary-dark: #14c4df;
-  --ifm-color-primary-darker: #12b9d3;
-  --ifm-color-primary-darkest: #0f99ae;
-  --ifm-color-primary-light: #3fdaf0;
-  --ifm-color-primary-lighter: #4cddf2;
-  --ifm-color-primary-lightest: #74e6f5;
-  --ifm-background-color: #05060a;
-  --ifm-background-surface-color: #0b0e16;
-  --ifm-card-background-color: rgba(255, 255, 255, 0.02);
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+  --ifm-color-primary: #ff1a1a;
+  --ifm-color-primary-dark: #e60000;
+  --ifm-color-primary-darker: #d90000;
+  --ifm-color-primary-darkest: #b30000;
+  --ifm-color-primary-light: #ff3333;
+  --ifm-color-primary-lighter: #ff4d4d;
+  --ifm-color-primary-lightest: #ff7a7a;
+  --ifm-background-color: #0a0a0a;
+  --ifm-background-surface-color: #121212;
+  --ifm-card-background-color: rgba(255, 26, 26, 0.03);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 26, 26, 0.08);
 }
 
 /* Prevent horizontal scrolling / pinch-zoom drift on mobile */
@@ -41,13 +41,14 @@ body {
 }
 
 .navbar {
-  backdrop-filter: blur(10px);
-  background: rgba(11, 14, 22, 0.7);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  backdrop-filter: none;
+  background: #0a0a0a;
+  border-bottom: 1px solid rgba(255, 26, 26, 0.25);
 }
 
 [data-theme='light'] .navbar {
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(196, 31, 36, 0.25);
 }
 
 .navbar__logo {
@@ -55,7 +56,7 @@ body {
 }
 
 .navbar__title {
-  font-family: 'Orbitron', system-ui, sans-serif;
+  font-family: 'Orbitron', 'JetBrains Mono', monospace;
   font-weight: 800;
   letter-spacing: 0.04em;
 }
@@ -71,5 +72,5 @@ html {
 
 /* Persian / RTL typography niceties */
 html[lang='fa-IR'] {
-  --ifm-font-family-base: 'Vazirmatn', system-ui, Tahoma, sans-serif;
+  --ifm-font-family-base: 'Vazirmatn', monospace;
 }
