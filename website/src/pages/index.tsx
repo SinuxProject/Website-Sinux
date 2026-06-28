@@ -5,6 +5,7 @@ import Translate from '@docusaurus/Translate';
 import CodeBlock from '@theme/CodeBlock';
 import Hero from '@site/src/components/Hero';
 import Features from '@site/src/components/Features';
+import GitHubSection from '@site/src/components/GitHubSection';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
@@ -57,6 +58,7 @@ export default function Home(): React.ReactElement {
       <Hero />
       <main>
         <Features />
+        <GitHubSection />
         <QuickStart />
       </main>
     </Layout>

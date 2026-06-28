@@ -15,6 +15,37 @@ const config: Config = {
     v4: true,
   },
 
+  // Custom fields exposed to client code via siteConfig.customFields.
+  // These make the GitHub repo and donation settings editable without
+  // touching component source code.
+  customFields: {
+    // GitHub repository to display commits/stars/contributors for.
+    githubOwner: 'SinuxProject',
+    githubRepo: 'Sinux',
+    // Donation settings — editable without code changes. The DonateModal
+    // component reads these at runtime.
+    donation: {
+      link: 'https://github.com/sponsors/CyberSinook',
+      wallets: [
+        {
+          ticker: 'BTC',
+          label: 'Bitcoin',
+          address: 'bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        },
+        {
+          ticker: 'ETH',
+          label: 'Ethereum',
+          address: '0x0000000000000000000000000000000000000000',
+        },
+        {
+          ticker: 'USDT',
+          label: 'Tether (TRC-20)',
+          address: 'Txxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+        },
+      ],
+    },
+  },
+
   // Production URL of your site.
   url: 'https://sinuxproject.github.io',
   // For GitHub Pages deployment, this is the "/<projectName>/" path.
@@ -89,6 +120,7 @@ const config: Config = {
           label: 'Docs',
         },
         {to: '/blog', label: 'Updates', position: 'left'},
+        {to: '/contributors', label: 'Contributors', position: 'left'},
         {
           type: 'localeDropdown',
           position: 'right',
@@ -121,6 +153,7 @@ const config: Config = {
         {
           title: 'More',
           items: [
+            {label: 'Contributors', to: '/contributors'},
             {label: 'GitHub', href: 'https://github.com/CyberSinook/Sinux'},
             {label: 'Issues', href: 'https://github.com/CyberSinook/Sinux/issues'},
             {label: 'Releases', href: 'https://github.com/CyberSinook/Sinux/releases'},
