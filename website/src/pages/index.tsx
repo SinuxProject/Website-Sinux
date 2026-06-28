@@ -30,7 +30,7 @@ function QuickStart(): React.ReactElement {
         <div className={styles.qsCode}>
           <CodeBlock language="bash">
 {`# Clone the source
-git clone https://github.com/CyberSinook/Sinux.git
+git clone https://github.com/SinuxProject/Sinux.git
 cd Sinux
 
 # Build kernel + userspace

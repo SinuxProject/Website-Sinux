@@ -113,7 +113,7 @@ export default function ContributorsPage(): React.ReactElement {
   return (
     <Layout
       title="Contributors"
-      description="The people who built Sinux — fetched live from GitHub."
+      description="The people who built Sinux"
     >
       <section className={styles.section}>
         <div className={styles.inner}>

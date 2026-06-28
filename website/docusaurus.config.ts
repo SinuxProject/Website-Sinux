@@ -160,7 +160,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} CyberSinook. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} SinuxProject.`,
     },
     prism: {
       theme: prismThemes.github,
