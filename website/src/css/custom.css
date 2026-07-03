@@ -96,6 +96,25 @@
   --features-hover-shadow: rgba(220, 38, 38, 0.2);
 }
 
+/* Prevent horizontal scrolling completely */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  max-width: 100%;
+}
+
 /* Prevent horizontal scrolling / pinch-zoom drift on mobile */
 html,
 body {
@@ -108,6 +127,7 @@ body {
   background: var(--ifm-background-surface-color);
   border-bottom: 1px solid var(--hero-badge-border);
   transition: background 0.3s ease, border-color 0.3s ease;
+  overflow-x: hidden;
 }
 
 .navbar__logo {
@@ -123,10 +143,6 @@ body {
 /* GitHub navbar icon */
 .navbar__item .navbar__link[href*='github.com']:hover {
   color: var(--ifm-color-primary);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 /* Persian / RTL typography niceties */
@@ -157,6 +173,7 @@ html[lang='fa-IR'] {
 [data-theme='dark'] pre {
   background-color: rgba(15, 8, 8, 0.8);
   border: 1px solid rgba(220, 38, 38, 0.2);
+  overflow-x: auto;
 }
 
 [data-theme='dark'] .admonition {
@@ -174,6 +191,8 @@ html[lang='fa-IR'] {
 
 [data-theme='dark'] table {
   background-color: rgba(30, 12, 12, 0.4);
+  width: 100%;
+  overflow-x: auto;
 }
 
 [data-theme='dark'] th {
