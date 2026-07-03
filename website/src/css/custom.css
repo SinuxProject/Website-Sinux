@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Vazirmatn:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /**
- * Sinux theme — Heaven (light) & Hell (dark) duality.
- * Dark mode  = Hell: blood red on near-black.
+ * Sinux theme — Heaven (light) & Hell (red dark) duality.
+ * Dark mode  = Hell: deep red on near-black with crimson accents.
  * Light mode = Heaven: sky blue on soft white.
  */
 
@@ -55,45 +55,45 @@
   --features-hover-shadow: rgba(37, 99, 235, 0.15);
 }
 
-/* 🔥 Hell — dark mode */
+/* 🔥 Hell — enhanced red dark mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #ff1a1a;
-  --ifm-color-primary-dark: #e60000;
-  --ifm-color-primary-darker: #d90000;
-  --ifm-color-primary-darkest: #b30000;
-  --ifm-color-primary-light: #ff3333;
-  --ifm-color-primary-lighter: #ff4d4d;
-  --ifm-color-primary-lightest: #ff7a7a;
+  --ifm-color-primary: #dc2626;
+  --ifm-color-primary-dark: #b91c1c;
+  --ifm-color-primary-darker: #991b1b;
+  --ifm-color-primary-darkest: #7f1d1d;
+  --ifm-color-primary-light: #ef4444;
+  --ifm-color-primary-lighter: #f87171;
+  --ifm-color-primary-lightest: #fca5a5;
 
-  --ifm-background-color: #0a0a0a;
-  --ifm-background-surface-color: #121212;
-  --ifm-card-background-color: rgba(255, 26, 26, 0.03);
-  --docusaurus-highlighted-code-line-bg: rgba(255, 26, 26, 0.08);
+  --ifm-background-color: #0c0303;
+  --ifm-background-surface-color: #1a0a0a;
+  --ifm-card-background-color: rgba(220, 38, 38, 0.04);
+  --docusaurus-highlighted-code-line-bg: rgba(220, 38, 38, 0.1);
 
   /* Hero + Features variables */
-  --hero-glow-1: rgba(255, 26, 26, 0.14);
-  --hero-glow-2: rgba(196, 31, 36, 0.14);
-  --hero-bg-base: #0a0a0a;
-  --hero-grid-line: rgba(255, 26, 26, 0.05);
+  --hero-glow-1: rgba(220, 38, 38, 0.16);
+  --hero-glow-2: rgba(200, 30, 30, 0.14);
+  --hero-bg-base: #0c0303;
+  --hero-grid-line: rgba(220, 38, 38, 0.06);
   --hero-badge-text: #ff6b6b;
-  --hero-badge-bg: rgba(255, 26, 26, 0.08);
-  --hero-badge-border: rgba(255, 26, 26, 0.4);
-  --hero-title-grad: linear-gradient(100deg, #ff6b6b 0%, #ff1a1a 25%, #c41f24 50%, #e0282d 75%, #ff6b6b 100%);
-  --hero-title-glow: rgba(255, 26, 26, 0.45);
-  --hero-subtitle: #cbd5e1;
-  --hero-btn-text: #1a0303;
-  --hero-btn-grad: linear-gradient(135deg, #ff6b6b, #ff1a1a);
-  --hero-btn-shadow: rgba(255, 26, 26, 0.4);
-  --hero-secondary-text: #ffe0e0;
-  --hero-secondary-bg: rgba(20, 10, 10, 0.4);
-  --hero-secondary-border-hover: rgba(255, 26, 26, 0.7);
-  --hero-stat-num: #ff6b6b;
-  --hero-logo-glow-1: rgba(255, 26, 26, 0.55);
-  --hero-logo-glow-2: rgba(196, 31, 36, 0.35);
+  --hero-badge-bg: rgba(220, 38, 38, 0.12);
+  --hero-badge-border: rgba(220, 38, 38, 0.45);
+  --hero-title-grad: linear-gradient(100deg, #fca5a5 0%, #ef4444 25%, #dc2626 50%, #f87171 75%, #fca5a5 100%);
+  --hero-title-glow: rgba(220, 38, 38, 0.5);
+  --hero-subtitle: #e5e7eb;
+  --hero-btn-text: #0c0303;
+  --hero-btn-grad: linear-gradient(135deg, #f87171, #dc2626);
+  --hero-btn-shadow: rgba(220, 38, 38, 0.5);
+  --hero-secondary-text: #fecaca;
+  --hero-secondary-bg: rgba(40, 15, 15, 0.5);
+  --hero-secondary-border-hover: rgba(220, 38, 38, 0.8);
+  --hero-stat-num: #f87171;
+  --hero-logo-glow-1: rgba(220, 38, 38, 0.6);
+  --hero-logo-glow-2: rgba(200, 30, 30, 0.4);
 
-  --features-glow: rgba(255, 26, 26, 0.08);
-  --features-hover-border: rgba(255, 26, 26, 0.6);
-  --features-hover-shadow: rgba(255, 26, 26, 0.15);
+  --features-glow: rgba(220, 38, 38, 0.09);
+  --features-hover-border: rgba(220, 38, 38, 0.65);
+  --features-hover-shadow: rgba(220, 38, 38, 0.2);
 }
 
 /* Prevent horizontal scrolling / pinch-zoom drift on mobile */
@@ -140,4 +140,47 @@ html[lang='fa-IR'] {
 }
 [data-theme='dark'] [class*='toggleButton'] {
   --toggle-tooltip-content: 'Enter Heaven';
+}
+
+/* Enhanced red dark theme text refinements */
+[data-theme='dark'] {
+  --ifm-font-color-base: #f3f4f6;
+  --ifm-font-color-base-inverse: #0c0303;
+  color-scheme: dark;
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(220, 38, 38, 0.08);
+  color: #fecaca;
+}
+
+[data-theme='dark'] pre {
+  background-color: rgba(15, 8, 8, 0.8);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+[data-theme='dark'] .admonition {
+  background-color: rgba(30, 12, 12, 0.7);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .admonition-note {
+  border-left-color: #f87171;
+}
+
+[data-theme='dark'] .docItemContainer article header {
+  border-bottom-color: rgba(220, 38, 38, 0.2);
+}
+
+[data-theme='dark'] table {
+  background-color: rgba(30, 12, 12, 0.4);
+}
+
+[data-theme='dark'] th {
+  background-color: rgba(220, 38, 38, 0.15);
+  color: #fecaca;
+}
+
+[data-theme='dark'] td {
+  border-bottom-color: rgba(220, 38, 38, 0.15);
 }
