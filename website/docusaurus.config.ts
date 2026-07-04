@@ -47,7 +47,7 @@ const config: Config = {
   },
 
   // Production URL of your site.
-  url: 'https://sinuxproject.github.io',
+  url: 'https://barsam44.github.io',
   // For GitHub Pages deployment, this is the "/<projectName>/" path.
   baseUrl: '/Website-Sinux/',
 

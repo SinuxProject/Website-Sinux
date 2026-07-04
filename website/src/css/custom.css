@@ -1,36 +1,118 @@
 /* Futuristic display font for the Sinux wordmark */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Vazirmatn:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Vazirmatn:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 /**
- * Sinux theme — cyan + violet on deep space background.
+ * Sinux theme — Heaven (light) & Hell (red dark) duality.
+ * Dark mode  = Hell: deep red on near-black with crimson accents.
+ * Light mode = Heaven: sky blue on soft white.
  */
 
 :root {
-  --ifm-color-primary: #0e9fb8;
-  --ifm-color-primary-dark: #0d8fa6;
-  --ifm-color-primary-darker: #0c879d;
-  --ifm-color-primary-darkest: #0a6f81;
-  --ifm-color-primary-light: #10afca;
-  --ifm-color-primary-lighter: #11b7d3;
-  --ifm-color-primary-lightest: #2bc8e2;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-base: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
-/* Dark mode — the primary experience */
+/* ☁️ Heaven — light mode */
+:root,
+[data-theme='light'] {
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+
+  --ifm-background-color: #f5f9ff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-card-background-color: rgba(37, 99, 235, 0.03);
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.08);
+
+  /* Hero + Features variables */
+  --hero-glow-1: rgba(37, 99, 235, 0.12);
+  --hero-glow-2: rgba(96, 165, 250, 0.12);
+  --hero-bg-base: #f5f9ff;
+  --hero-grid-line: rgba(37, 99, 235, 0.06);
+  --hero-badge-text: #1d4ed8;
+  --hero-badge-bg: rgba(37, 99, 235, 0.08);
+  --hero-badge-border: rgba(37, 99, 235, 0.35);
+  --hero-title-grad: linear-gradient(100deg, #93c5fd 0%, #3b82f6 25%, #2563eb 50%, #60a5fa 75%, #93c5fd 100%);
+  --hero-title-glow: rgba(37, 99, 235, 0.35);
+  --hero-subtitle: #475569;
+  --hero-btn-text: #f5f9ff;
+  --hero-btn-grad: linear-gradient(135deg, #60a5fa, #2563eb);
+  --hero-btn-shadow: rgba(37, 99, 235, 0.35);
+  --hero-secondary-text: #1e3a8a;
+  --hero-secondary-bg: rgba(255, 255, 255, 0.6);
+  --hero-secondary-border-hover: rgba(37, 99, 235, 0.6);
+  --hero-stat-num: #2563eb;
+  --hero-logo-glow-1: rgba(37, 99, 235, 0.45);
+  --hero-logo-glow-2: rgba(96, 165, 250, 0.3);
+
+  --features-glow: rgba(37, 99, 235, 0.07);
+  --features-hover-border: rgba(37, 99, 235, 0.5);
+  --features-hover-shadow: rgba(37, 99, 235, 0.15);
+}
+
+/* 🔥 Hell — enhanced red dark mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #22d3ee;
-  --ifm-color-primary-dark: #14c4df;
-  --ifm-color-primary-darker: #12b9d3;
-  --ifm-color-primary-darkest: #0f99ae;
-  --ifm-color-primary-light: #3fdaf0;
-  --ifm-color-primary-lighter: #4cddf2;
-  --ifm-color-primary-lightest: #74e6f5;
-  --ifm-background-color: #05060a;
-  --ifm-background-surface-color: #0b0e16;
-  --ifm-card-background-color: rgba(255, 255, 255, 0.02);
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
+  --ifm-color-primary: #dc2626;
+  --ifm-color-primary-dark: #b91c1c;
+  --ifm-color-primary-darker: #991b1b;
+  --ifm-color-primary-darkest: #7f1d1d;
+  --ifm-color-primary-light: #ef4444;
+  --ifm-color-primary-lighter: #f87171;
+  --ifm-color-primary-lightest: #fca5a5;
+
+  --ifm-background-color: #0c0303;
+  --ifm-background-surface-color: #1a0a0a;
+  --ifm-card-background-color: rgba(220, 38, 38, 0.04);
+  --docusaurus-highlighted-code-line-bg: rgba(220, 38, 38, 0.1);
+
+  /* Hero + Features variables */
+  --hero-glow-1: rgba(220, 38, 38, 0.16);
+  --hero-glow-2: rgba(200, 30, 30, 0.14);
+  --hero-bg-base: #0c0303;
+  --hero-grid-line: rgba(220, 38, 38, 0.06);
+  --hero-badge-text: #ff6b6b;
+  --hero-badge-bg: rgba(220, 38, 38, 0.12);
+  --hero-badge-border: rgba(220, 38, 38, 0.45);
+  --hero-title-grad: linear-gradient(100deg, #fca5a5 0%, #ef4444 25%, #dc2626 50%, #f87171 75%, #fca5a5 100%);
+  --hero-title-glow: rgba(220, 38, 38, 0.5);
+  --hero-subtitle: #e5e7eb;
+  --hero-btn-text: #0c0303;
+  --hero-btn-grad: linear-gradient(135deg, #f87171, #dc2626);
+  --hero-btn-shadow: rgba(220, 38, 38, 0.5);
+  --hero-secondary-text: #fecaca;
+  --hero-secondary-bg: rgba(40, 15, 15, 0.5);
+  --hero-secondary-border-hover: rgba(220, 38, 38, 0.8);
+  --hero-stat-num: #f87171;
+  --hero-logo-glow-1: rgba(220, 38, 38, 0.6);
+  --hero-logo-glow-2: rgba(200, 30, 30, 0.4);
+
+  --features-glow: rgba(220, 38, 38, 0.09);
+  --features-hover-border: rgba(220, 38, 38, 0.65);
+  --features-hover-shadow: rgba(220, 38, 38, 0.2);
+}
+
+/* Prevent horizontal scrolling completely */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  max-width: 100%;
 }
 
 /* Prevent horizontal scrolling / pinch-zoom drift on mobile */
@@ -41,13 +123,11 @@ body {
 }
 
 .navbar {
-  backdrop-filter: blur(10px);
-  background: rgba(11, 14, 22, 0.7);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-[data-theme='light'] .navbar {
-  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: none;
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--hero-badge-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  overflow-x: hidden;
 }
 
 .navbar__logo {
@@ -55,7 +135,7 @@ body {
 }
 
 .navbar__title {
-  font-family: 'Orbitron', system-ui, sans-serif;
+  font-family: 'Orbitron', 'JetBrains Mono', monospace;
   font-weight: 800;
   letter-spacing: 0.04em;
 }
@@ -65,34 +145,61 @@ body {
   color: var(--ifm-color-primary);
 }
 
-/* Donate button in the navbar (injected via Root theme wrapper) */
-.donate-navbar-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  background: rgba(248, 113, 113, 0.12);
-  border: 1px solid rgba(248, 113, 113, 0.4);
-  border-radius: 8px;
-  padding: 0.35rem 0.8rem;
-  margin-inline-start: 0.5rem;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #fca5a5;
-  cursor: pointer;
-  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
-}
-
-.donate-navbar-btn:hover {
-  background: rgba(248, 113, 113, 0.2);
-  border-color: rgba(248, 113, 113, 0.8);
-  color: #fff;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 /* Persian / RTL typography niceties */
 html[lang='fa-IR'] {
-  --ifm-font-family-base: 'Vazirmatn', system-ui, Tahoma, sans-serif;
+  --ifm-font-family-base: 'Vazirmatn', monospace;
+}
+
+/* Themed color-mode toggle tooltip ("Enter Heaven" / "Enter Hell") */
+[data-theme='light'] [class*='toggleButton'] {
+  --toggle-tooltip-content: 'Enter Hell';
+}
+[data-theme='dark'] [class*='toggleButton'] {
+  --toggle-tooltip-content: 'Enter Heaven';
+}
+
+/* Enhanced red dark theme text refinements */
+[data-theme='dark'] {
+  --ifm-font-color-base: #f3f4f6;
+  --ifm-font-color-base-inverse: #0c0303;
+  color-scheme: dark;
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(220, 38, 38, 0.08);
+  color: #fecaca;
+}
+
+[data-theme='dark'] pre {
+  background-color: rgba(15, 8, 8, 0.8);
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  overflow-x: auto;
+}
+
+[data-theme='dark'] .admonition {
+  background-color: rgba(30, 12, 12, 0.7);
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .admonition-note {
+  border-left-color: #f87171;
+}
+
+[data-theme='dark'] .docItemContainer article header {
+  border-bottom-color: rgba(220, 38, 38, 0.2);
+}
+
+[data-theme='dark'] table {
+  background-color: rgba(30, 12, 12, 0.4);
+  width: 100%;
+  overflow-x: auto;
+}
+
+[data-theme='dark'] th {
+  background-color: rgba(220, 38, 38, 0.15);
+  color: #fecaca;
+}
+
+[data-theme='dark'] td {
+  border-bottom-color: rgba(220, 38, 38, 0.15);
 }
